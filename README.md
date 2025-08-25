@@ -23,13 +23,13 @@ New-SelfSignedCertificate -CertStoreLocation Cert:\LocalMachine\My -DnsName "loc
 	* Right Click new certificate on the right pane and select All Tasks > Export...
 	* No private key
 	* Choose Base-64 encoded X.509 (.CER)
-	* Save this in your code path like: "c:/code/livesharp/src/livesharp.server/localhost.livesharp.net.cer"
+	* Save this in your code path like: `c:\code\livesharp\src\livesharp.server\localhost.livesharp.net.cer`
 
-* I've already changed the references to point to the new certificate in this code, but youc an search for localhost.livesharp.net.cer to see where those are in the codebase.file
+* I've already changed the references to point to the new certificate in this code, but you can search for localhost.livesharp.net.cer to see where those are in the codebase.file
 
-* Build Livesharp in Visual Studio
+* Build Livesharp Solution in Visual Studio
 
-* Run livesharp-server like below then launch your project from visual studio
+* Run livesharp-server like below, then launch your project from visual studio
 
 
 # How to build
