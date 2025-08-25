@@ -1,6 +1,33 @@
 # LiveSharp
 Original hot reload solution for .NET platform. This project has mostly been superceded by a built-in hot reload in .NET 6. However, there are still many issues with the native hot reload, that's why I decided to open LiveSharp to the public
 
+# Demo Project
+* There is a simple sample / demo project in the /Demos/Simple-Blazor-Server folder. Simply set that as the startup project and run after you have started livesharp-server via the command line.
+* Example 1: Go to Pages/Index.razor when the app is running and modify the css and save the file. The changes should update immediately.
+* Example 2: Click the increment button several times. Now, go change the amount in the IncrementCounter() method and save the file, then click the button again.
+
+# How to generate your own SSL Certificate
+* Powershell admin, run the following line:
+
+```
+New-SelfSignedCertificate -CertStoreLocation Cert:\LocalMachine\My -DnsName "localhost.livesharp.net" -FriendlyName "Localhost Livesharp SSL" -NotAfter (Get-Date).AddYears(10)
+```
+
+* Export Cert as x509 no private key .CER file to /src/livesharp.server directory
+	* Win+R > certlm.msc
+	* Expand Persaonl > Certificates
+	* Right Click new certificate on the right pane and select All Tasks > Export...
+	* No private key
+	* Choose Base-64 encoded X.509 (.CER)
+	* Save this in your code path like: "c:/code/livesharp/src/livesharp.server/localhost.livesharp.net.cer"
+
+* I've already changed the references to point to the new certificate in this code, but youc an search for localhost.livesharp.net.cer to see where those are in the codebase.file
+
+* Build Livesharp in Visual Studio
+
+* Run livesharp-server like below then launch your project from visual studio
+
+
 # How to build
 
 * Open and build LiveSharp.Build.sln
@@ -22,6 +49,11 @@ Original hot reload solution for .NET platform. This project has mostly been sup
 * Run your project
 
 
+# Potential Errors
 
+* You may need to install postcss-cli tool if you get an error on startup via command line. You can do that using npm by:
+```
+npm install postcss postcss-cli
+```
 
 
