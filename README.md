@@ -5,7 +5,7 @@ This is a fork of https://github.com/ionoy/LiveSharp and I'm not the original au
 
 # Demo Project
 
-* There is a simple sample / demo project in the /Demos/Simple-Blazor-Server folder. Simply set that as the startup project and run after you have started livesharp-server via the command line.
+* There is a simple sample Blazor project in the `/Demos/Simple-Blazor-Server` folder. Simply set that as the startup project and run after you have started livesharp server via `dontnet run` on the command line.
 * Example 1: Go to Pages/Index.razor when the app is running and modify the css and save the file. The changes should update immediately.
 * Example 2: Click the increment button several times. Now, go change the amount in the IncrementCounter() method and save the file, then click the button again.
 
@@ -25,7 +25,7 @@ New-SelfSignedCertificate -CertStoreLocation Cert:\LocalMachine\My -DnsName "loc
 	* Choose Base-64 encoded X.509 (.CER)
 	* Save this in your code path like: `c:\code\livesharp\src\livesharp.server\localhost.livesharp.net.cer`
 
-* I've already changed the references to point to the new certificate in this code, but you can search for localhost.livesharp.net.cer to see where those are in the codebase.file
+* I've already changed the references to point to the new certificate in this code, but you can search for localhost.livesharp.net.cer to see where those are in the codebase.
 
 * Build Livesharp Solution in Visual Studio
 
