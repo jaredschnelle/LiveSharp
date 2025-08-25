@@ -70,7 +70,7 @@ namespace LiveSharp.Dashboard
 
                 await client.PostAsync(url, formUrlEncodedContent);
             }
-            catch (Exception e) {
+            catch (Exception) {
                 // Don't post to Logger so we don't create an infinite logging loop if connection fails
                 Console.WriteLine();
             }

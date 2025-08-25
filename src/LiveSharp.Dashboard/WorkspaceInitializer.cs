@@ -64,7 +64,7 @@ namespace LiveSharp.Dashboard
             Workspace.LoadSolution(ProjectInfo);
             Workspace.SetLicenseStatus(true);
             
-            Task.Run(async () => await CheckForNuGetUpdates());
+            //Task.Run(async () => await CheckForNuGetUpdates());
         }
 
         private void SendBroadcast(byte[] buffer, byte contentType, int groupId)

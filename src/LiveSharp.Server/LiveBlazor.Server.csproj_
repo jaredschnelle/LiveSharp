@@ -51,7 +51,7 @@
         <_ContentIncludedByDefault Remove="wwwroot\assets\css\tailwind.min.css" />
     </ItemGroup>
     <ItemGroup>
-        <None Update="localhost.livesharp.net.pfx">
+        <None Update="localhost.livesharp.cer">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </None>
     </ItemGroup>

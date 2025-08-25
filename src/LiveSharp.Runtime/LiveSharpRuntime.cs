@@ -136,29 +136,7 @@ namespace LiveSharp.Runtime
 
         private static void LoadExtensions()
         {
-            try {
-                return;
-                using var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("LiveSharp.Runtime.Resources.LiveSharp.Runtime.NS21.dll");
-
-                if (stream == null) {
-                    Logger.LogMessage("LiveSharp extensions not found");
-                    return;
-                }          
-            
-                var assemblyData = new byte[stream.Length];
-                stream.Read(assemblyData, 0, assemblyData.Length);
-                var assembly = Assembly.Load(assemblyData);
-
-                var extensionsType = assembly.GetTypes().FirstOrDefault(t => typeof(ILiveSharpRuntimeExt).IsAssignableFrom(t));
-                if (extensionsType == null) {
-                    Logger.LogMessage("Couldn't find type implementing ILiveSharpRuntimeExt in runtime extensions");
-                    return;
-                }
-
-                RuntimeExtensions = (ILiveSharpRuntimeExt)Activator.CreateInstance(extensionsType);
-            } catch (Exception e) {
-                Logger.LogMessage("Loading extensions failed: " + e.Message);
-            }
+            return;
         }
 
         public static void AddHandler(Type handlerType)

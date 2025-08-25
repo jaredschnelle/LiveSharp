@@ -65,9 +65,9 @@ namespace LiveSharp.Server
                     {
                         opts.ConfigureHttpsDefaults(o =>
                         {
-                            var certificateLocation = Path.Combine(assemblyLocation, "localhost.livesharp.net.pfx");
-                        
-                            o.ServerCertificate = new X509Certificate2(certificateLocation, "dS#A^*903DPo");
+                            var certificateLocation = Path.Combine(assemblyLocation, "localhost.livesharp.cer");
+                            //o.ServerCertificate = new X509Certificate2(certificateLocation, "dS#A^*903DPo");
+                            o.ServerCertificate = new X509Certificate2(certificateLocation);
                         });
                     })
                     .ConfigureServices(services =>
@@ -150,9 +150,9 @@ namespace LiveSharp.Server
                     opts.ConfigureHttpsDefaults(o =>
                     {
                         var assemblyLocation = Path.GetDirectoryName(typeof(Program).Assembly.Location);
-                        var certificateLocation = Path.Combine(assemblyLocation, "localhost.livesharp.net.pfx");
-                        
-                        o.ServerCertificate = new X509Certificate2(certificateLocation, "dS#A^*903DPo");
+                        var certificateLocation = Path.Combine(assemblyLocation, "localhost.livesharp.cer");
+                        o.ServerCertificate = new X509Certificate2(certificateLocation);
+                        //o.ServerCertificate = new X509Certificate2(certificateLocation, "dS#A^*903DPo");
                     });
                 })
                 .ConfigureServices(services => services.AddSingleton(workspaceInitializerType, workspaceInitializer))

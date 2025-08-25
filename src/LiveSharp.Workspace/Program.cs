@@ -8,10 +8,10 @@ namespace LiveSharp
     class Program
     {
         //private static WorkspaceLogger _logger;
-        private static LiveServerClient _client;
+        //private static LiveServerClient _client;
         private static TimeSpan PingDelay = TimeSpan.FromSeconds(20);
-        private static AutoResetEvent _autoResetEvent;
-        private static bool _heartBeatReceived;
+        //private static AutoResetEvent _autoResetEvent;
+        //private static bool _heartBeatReceived;
 
         public static void Main (string[] args) 
         {

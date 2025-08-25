@@ -333,3 +333,6 @@ build/
 
 scripts/LiveSharp.Build.dll
 scripts/*.zip
+/src/LiveSharp.Server/localhost.livesharp.cer
+/src/LiveSharp.Server/localhost.livesharp.net2.pfx
+/!HIve/Livesharp Cert Fix.txt

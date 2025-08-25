@@ -280,7 +280,7 @@ namespace LiveSharp
                     string scopedCssOutputFullPath = null;
                     process.Start();
 
-                    var nextLineIsBundlePath = false;
+                    //var nextLineIsBundlePath = false;
 
                     while (!process.StandardOutput.EndOfStream) {
                         var line = process.StandardOutput.ReadLine();
