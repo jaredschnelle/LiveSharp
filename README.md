@@ -1,6 +1,8 @@
 # LiveSharp
 Original hot reload solution for .NET platform. This project has mostly been superceded by a built-in hot reload in .NET 6. However, there are still many issues with the native hot reload, that's why I decided to open LiveSharp to the public
 
+This is a fork of https://github.com/ionoy/LiveSharp and I'm not the original author of the bulk of this code!
+
 # Demo Project
 
 * There is a simple sample / demo project in the /Demos/Simple-Blazor-Server folder. Simply set that as the startup project and run after you have started livesharp-server via the command line.
