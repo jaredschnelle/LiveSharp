@@ -1,0 +1,33 @@
+﻿@page "/"
+
+<PageTitle>Index</PageTitle>
+
+<style type="text/css">
+    h1 {
+        color: blue;
+    }
+</style>
+
+<h1>Hello, world! 1234</h1>
+
+Welcome to your new app.
+
+<div style="margin: 20px 0px;">
+    <label>Counter: @_counter</label>
+    <button class="btn btn-primary" @onclick="IncrementCounter" style="margin-left: 10px;">Increment</button>
+</div>
+
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+@code {
+    private int _counter = 0;
+
+    private async Task IncrementCounter()
+    {
+        var incrementAmount = 15;
+        _counter += incrementAmount;
+
+        StateHasChanged();
+    }
+}
