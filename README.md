@@ -2,11 +2,13 @@
 Original hot reload solution for .NET platform. This project has mostly been superceded by a built-in hot reload in .NET 6. However, there are still many issues with the native hot reload, that's why I decided to open LiveSharp to the public
 
 # Demo Project
+
 * There is a simple sample / demo project in the /Demos/Simple-Blazor-Server folder. Simply set that as the startup project and run after you have started livesharp-server via the command line.
 * Example 1: Go to Pages/Index.razor when the app is running and modify the css and save the file. The changes should update immediately.
 * Example 2: Click the increment button several times. Now, go change the amount in the IncrementCounter() method and save the file, then click the button again.
 
 # How to generate your own SSL Certificate
+
 * Powershell admin, run the following line:
 
 ```
@@ -15,7 +17,7 @@ New-SelfSignedCertificate -CertStoreLocation Cert:\LocalMachine\My -DnsName "loc
 
 * Export Cert as x509 no private key .CER file to /src/livesharp.server directory
 	* Win+R > certlm.msc
-	* Expand Persaonl > Certificates
+	* Expand Personal > Certificates
 	* Right Click new certificate on the right pane and select All Tasks > Export...
 	* No private key
 	* Choose Base-64 encoded X.509 (.CER)
